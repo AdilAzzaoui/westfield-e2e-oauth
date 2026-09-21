@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy - Westfield E2E</title>
+  <meta name="description" content="Privacy policy of the Westfield E2E internal QA tool.">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --muted: #5f5b56;
+      --accent: #b3261e;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #161616;
+        --text: #ededed;
+        --muted: #a8a39c;
+        --accent: #ff8a7a;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+    main { max-width: 720px; margin: 0 auto; padding: 48px 16px 64px; }
+    h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 8px; }
+    .updated { color: var(--muted); margin: 0 0 32px; }
+    h2 { font-size: 1.15rem; margin: 32px 0 8px; }
+    ul { padding-left: 20px; margin: 8px 0; }
+    a { color: var(--accent); }
+    footer { margin-top: 48px; color: var(--muted); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Westfield E2E - last updated 21 September 2026</p>
+
+    <h2>1. Purpose</h2>
+    <p>Westfield E2E is an internal quality-assurance tool. It supports the automated end-to-end tests of the password-reset journey of the Westfield website. It has no end users and is not offered to the public.</p>
+
+    <h2>2. Data accessed</h2>
+    <ul>
+      <li>The tool accesses only the dedicated test mailbox <strong>testautowestfield@gmail.com</strong>, which is owned and operated by the QA team.</li>
+      <li>It uses the Google Gmail API with the read-only scope <code>https://www.googleapis.com/auth/gmail.readonly</code>.</li>
+      <li>It searches recent password-reset emails sent to test aliases of that mailbox and reads their content to extract the reset link.</li>
+      <li>The mailbox only receives emails for disposable test accounts. It contains no personal data of real customers.</li>
+    </ul>
+
+    <h2>3. How the data is used</h2>
+    <p>The extracted reset link is used once, during the test run, to complete the password-reset journey. Email content is not used for any other purpose.</p>
+
+    <h2>4. Storage and retention</h2>
+    <ul>
+      <li>Email content is processed in memory during the test run and is not stored in a database.</li>
+      <li>Test reports produced by the CI pipeline may contain execution logs; they are kept for a limited period (14 days) and are accessible only to the QA team.</li>
+    </ul>
+
+    <h2>5. Sharing</h2>
+    <p>Data obtained through the Gmail API is not sold, shared with third parties, used for advertising, or used to train artificial-intelligence models.</p>
+
+    <h2>6. Google API Services User Data Policy</h2>
+    <p>The use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+    <h2>7. Revoking access</h2>
+    <p>Access can be revoked at any time from the Google account security settings: <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</p>
+
+    <h2>8. Contact</h2>
+    <p><a href="mailto:testautowestfield@gmail.com">testautowestfield@gmail.com</a></p>
+
+    <footer>
+      <a href="index.html">Back to Westfield E2E</a><br>
+      This page is maintained by the QA test-automation team responsible for the Westfield E2E test suite.
+      It is not an official Westfield or Unibail-Rodamco-Westfield service.
+    </footer>
+  </main>
+</body>
+</html>

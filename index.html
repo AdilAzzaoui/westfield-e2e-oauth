@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Westfield E2E</title>
+  <meta name="description" content="Internal QA tool that reads password-reset emails from a dedicated test mailbox during automated end-to-end tests.">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --muted: #5f5b56;
+      --accent: #b3261e;
+      --panel: #f4f1ec;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #161616;
+        --text: #ededed;
+        --muted: #a8a39c;
+        --accent: #ff8a7a;
+        --panel: #232120;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+    main { max-width: 720px; margin: 0 auto; padding: 48px 16px 64px; }
+    h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 8px; }
+    .lead { color: var(--muted); margin: 0 0 32px; }
+    h2 { font-size: 1.15rem; margin: 32px 0 8px; }
+    .panel { background: var(--panel); border-radius: 8px; padding: 16px 20px; }
+    ul { padding-left: 20px; margin: 8px 0; }
+    a { color: var(--accent); }
+    footer { margin-top: 48px; color: var(--muted); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Westfield E2E</h1>
+    <p class="lead">Internal QA tool for the automated end-to-end test suite of the Westfield website.</p>
+
+    <div class="panel">
+      <p>This application is used only by the QA test-automation team. It is not a public service and has no end users.</p>
+    </div>
+
+    <h2>What it does</h2>
+    <p>During automated tests of the password-reset journey, the test suite requests a password reset for a disposable test account, then uses the Gmail API with the read-only scope to find the reset email in a dedicated test mailbox and extract the reset link.</p>
+
+    <h2>Scope of access</h2>
+    <ul>
+      <li>Only the dedicated test mailbox <strong>testautowestfield@gmail.com</strong> is accessed.</li>
+      <li>Access is read-only (<code>gmail.readonly</code>). The tool never sends, modifies or deletes emails.</li>
+      <li>No personal data of real customers is processed.</li>
+    </ul>
+
+    <h2>Privacy</h2>
+    <p>See the <a href="privacy.html">privacy policy</a>.</p>
+
+    <h2>Contact</h2>
+    <p><a href="mailto:testautowestfield@gmail.com">testautowestfield@gmail.com</a></p>
+
+    <footer>
+      This page is maintained by the QA test-automation team responsible for the Westfield E2E test suite.
+      It is not an official Westfield or Unibail-Rodamco-Westfield service.
+    </footer>
+  </main>
+</body>
+</html>
